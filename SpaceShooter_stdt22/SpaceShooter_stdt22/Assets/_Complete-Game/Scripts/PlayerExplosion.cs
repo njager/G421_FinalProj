@@ -19,7 +19,7 @@ public class PlayerExplosion : MonoBehaviour {
 		/* G421 */
 		// play the ship explosion sound
 		// Paste your Event full path into PlayOneShot("event:/path_to_event_in_FMOD")
-		//FMODUnity.RuntimeManager.PlayOneShot("");
+		FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerExplosion");
 
 	}
 }

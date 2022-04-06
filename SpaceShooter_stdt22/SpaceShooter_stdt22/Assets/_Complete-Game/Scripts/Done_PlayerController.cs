@@ -76,7 +76,7 @@ public class Done_PlayerController : MonoBehaviour
 			// player weapon randomized event via FMOD
 			// Link FMOD Events to the EventInstance created above
 			// Paste your Event full path into PlayOneShot("event:/path_to_event_in_FMOD")
-			//FMODUnity.RuntimeManager.PlayOneShot("");
+			FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerExplosion");
 
 			// original shot fired audio call was here //
 			Debug.Log("player fires");

@@ -99,6 +99,7 @@ public class Done_GameController : MonoBehaviour
 				// use FMOD AHDSR envelope to fade out background sound when player resets the game
 				gameMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 				gameMusic.start();
+				gameMusic.setParameterByName("Intensity", 0);
 			}
 		}
 	}
