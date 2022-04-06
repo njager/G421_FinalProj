@@ -33,7 +33,7 @@ public class Done_GameController : MonoBehaviour
 
 	/* G421 */
 	// Declare the FMOD instance for game music and ambience
-	//FMOD.Studio.EventInstance gameMusic;
+	FMOD.Studio.EventInstance gameMusic;
 	//FMOD.Studio.EventInstance spaceAmbience;
 
 	void Start ()
@@ -49,9 +49,9 @@ public class Done_GameController : MonoBehaviour
 		/* G421 */
 		// Link FMOD Events to the EventInstance created above
 		// Paste your Event full path into CreateInstance("event:/path_to_event_in_FMOD")
-		//gameMusic = FMODUnity.RuntimeManager.CreateInstance("");
+		gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/GameMusic");
 		// cue the music to play
-		//gameMusic.start();
+		gameMusic.start();
 		// copy these lines for spaceAmbience if/as needed
 
 	}
@@ -72,34 +72,22 @@ public class Done_GameController : MonoBehaviour
 		timePlayed += Time.deltaTime;
 		//Debug.Log ("Time Elapsed: "+timePlayed);
 
-		/*******************************************************
-		 * Use numeric values in the switch statement to change
-		 * parameter values based on time elapsed while playing
-		 * *****************************************************
+
+		//Use numeric values in the switch statement to change
+		//parameter values based on time elapsed while playing
+		
 		switch (timePlayed)
 		{
 			case float val when val < 5:
-				gameMusic.setParameterByName("Score", 0);
+				gameMusic.setParameterByName("Intensity", 0);
 				break;
-			case float val when val < 10:
-				gameMusic.setParameterByName("Score", 20);
-				break;
-			case float val when val < 15:
-				gameMusic.setParameterByName("Score", 40);
-				break;
-			case float val when val < 20:
-				gameMusic.setParameterByName("Score", 60);
-				break;
-			case float val when val < 25:
-				gameMusic.setParameterByName("Score", 80);
-				break;
-			case float val when val >= 25:
-				gameMusic.setParameterByName("Score", 100);
+		case float val when val < 5:
+				gameMusic.setParameterByName("Intensity", 1);
 				break;
 			default:
 				break;
 		}
-		*******************************************************/
+
 		if (restart)
 		{
 			if (Input.GetKeyDown (KeyCode.R))
@@ -109,7 +97,8 @@ public class Done_GameController : MonoBehaviour
 				/* G421 */
 				// if you need to reset any audio when players hit "R" to reset, this is the place to do it
 				// use FMOD AHDSR envelope to fade out background sound when player resets the game
-				//gameMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				gameMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				gameMusic.start();
 			}
 		}
 	}
@@ -149,12 +138,21 @@ public class Done_GameController : MonoBehaviour
 		scoreText.text = "Score: " + score;
 		/* G421 */
 		// use the current value of score to direct playback of any adaptive audio features in your music
-		//gameMusic.setParameterByName("Score", score);
+		//gameMusic.setParameterByName("Intensity", score);
+		if(score >= 50)
+        {
+			gameMusic.setParameterByName("Intensity", 2);
+		}
+		if (score >= 100)
+		{
+			gameMusic.setParameterByName("Intensity", 3);
+		}
 	}
 	
 	public void GameOver ()
 	{
 		restartText.text = "Game Over";
 		gameOver = true;
+		gameMusic.setParameterByName("Intensity", 4);
 	}
 }
