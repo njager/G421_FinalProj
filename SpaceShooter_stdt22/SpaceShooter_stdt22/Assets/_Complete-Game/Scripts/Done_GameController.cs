@@ -67,6 +67,12 @@ public class Done_GameController : MonoBehaviour
 			//Debug.Log("Time has expired!!");
 		}
 
+		if (gameOver)
+		{
+			gameMusic.setParameterByName("Intensity", 4);
+		}
+
+
 		/* G421 */
 		// Need a counter to track time playing?
 		timePlayed += Time.deltaTime;
@@ -100,13 +106,14 @@ public class Done_GameController : MonoBehaviour
 				gameMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 				gameMusic.start();
 				gameMusic.setParameterByName("Intensity", 0);
+				timePlayed = 0;
 			}
 		}
 	}
 	
 	IEnumerator SpawnWaves ()
 	{
-		yield return new WaitForSeconds (startWait);
+		yield return new WaitForSeconds (15);
 		while (true)
 		{
 			for (int i = 0; i < hazardCount; i++)
@@ -121,6 +128,7 @@ public class Done_GameController : MonoBehaviour
 			
 			if (gameOver)
 			{
+				//gameMusic.setParameterByName("Intensity", 4);
 				restartText.text = "Game Over\nPress 'R' for Restart";
 				restart = true;
 				break;
@@ -140,11 +148,11 @@ public class Done_GameController : MonoBehaviour
 		/* G421 */
 		// use the current value of score to direct playback of any adaptive audio features in your music
 		//gameMusic.setParameterByName("Intensity", score);
-		if(score >= 50)
+		if(score >= 100)
         {
 			gameMusic.setParameterByName("Intensity", 2);
 		}
-		if (score >= 100)
+		if (score >= 200)
 		{
 			gameMusic.setParameterByName("Intensity", 3);
 		}
@@ -154,6 +162,6 @@ public class Done_GameController : MonoBehaviour
 	{
 		restartText.text = "Game Over";
 		gameOver = true;
-		gameMusic.setParameterByName("Intensity", 4);
+		
 	}
 }

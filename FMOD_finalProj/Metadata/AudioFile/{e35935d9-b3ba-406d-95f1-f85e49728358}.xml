@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{e35935d9-b3ba-406d-95f1-f85e49728358}">
+		<property name="assetPath">
+			<value>Impact_Crash_ODC-0020-321.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>6</value>
+		</property>
+		<property name="length">
+			<value>2.4213333333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96730815-169e-47dc-9fb7-afc88595581b}</destination>
+		</relationship>
+	</object>
+</objects>

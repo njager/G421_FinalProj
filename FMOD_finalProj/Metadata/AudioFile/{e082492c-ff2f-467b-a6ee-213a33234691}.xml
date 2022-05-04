@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{e082492c-ff2f-467b-a6ee-213a33234691}">
+		<property name="assetPath">
+			<value>Pyro_Fire_Ball_Burst_ODC-0055-747-01.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>25.514666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{96730815-169e-47dc-9fb7-afc88595581b}</destination>
+		</relationship>
+	</object>
+</objects>

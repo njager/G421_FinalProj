@@ -2,7 +2,7 @@
 <!DOCTYPE sesx>
 <sesx version="1.9">
 
-  <session appBuild="22.2.0.61" appVersion="22.2" audioChannelType="mono" bitDepth="32" duration="6927555" sampleRate="96000">
+  <session appBuild="22.3.0.60" appVersion="22.3" audioChannelType="mono" bitDepth="32" duration="6927555" sampleRate="96000">
     <tracks>
       <audioTrack automationLaneOpenState="false" id="10001" index="1" select="false" visible="true">
         <trackParameters trackHeight="134" trackHue="160" trackMinimized="false">
@@ -76,7 +76,7 @@
             <parameter index="0" name="volume" parameterValue="1"/>
             <parameter index="1" name="static gain" parameterValue="1"/>
           </component>
-          <component componentGuid="3edb4b2f-95b3-40b4-b487-5430f2c3ff1e" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+          <component componentGuid="85007be9-c1fd-4b61-aa53-1927820af96a" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
             <parameter index="0" parameterValue="0"/>
             <parameter index="1" name="mute" parameterValue="0"/>
           </component>
@@ -161,7 +161,7 @@
             <parameter index="0" name="volume" parameterValue="1"/>
             <parameter index="1" name="static gain" parameterValue="1"/>
           </component>
-          <component componentGuid="0e2033de-9d1e-4d7a-961e-7c9b20fee3a8" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+          <component componentGuid="029d58f0-5de6-4424-b06c-53997d01eccf" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
             <parameter index="0" parameterValue="0"/>
             <parameter index="1" name="mute" parameterValue="0"/>
           </component>
@@ -251,7 +251,7 @@
             <parameter index="0" name="volume" parameterValue="1"/>
             <parameter index="1" name="static gain" parameterValue="1"/>
           </component>
-          <component componentGuid="f92f4d83-865a-482e-940e-e2a639b38ddb" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+          <component componentGuid="e875936f-d0ea-4eaf-a6cd-0cd7adf274ea" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
             <parameter index="0" parameterValue="0"/>
             <parameter index="1" name="mute" parameterValue="0"/>
           </component>
@@ -341,7 +341,7 @@
             <parameter index="0" name="volume" parameterValue="1"/>
             <parameter index="1" name="static gain" parameterValue="1"/>
           </component>
-          <component componentGuid="ec67a81d-290e-4135-87c2-9e37ba176c05" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+          <component componentGuid="41860e0a-6e4f-4f90-a579-d37142a5eb57" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
             <parameter index="0" parameterValue="0"/>
             <parameter index="1" name="mute" parameterValue="0"/>
           </component>
@@ -426,7 +426,7 @@
             <parameter index="0" name="volume" parameterValue="1"/>
             <parameter index="1" name="static gain" parameterValue="1"/>
           </component>
-          <component componentGuid="b161d060-bbc8-4f0b-8931-1e60e67f3fcb" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+          <component componentGuid="ff256fbc-7bb5-4cbe-852c-45f14f7b49d9" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
             <parameter index="0" parameterValue="0"/>
             <parameter index="1" name="mute" parameterValue="0"/>
           </component>
@@ -593,9 +593,9 @@
             xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/">
          <xmp:CreatorTool>Adobe Audition 22.2 (Windows)</xmp:CreatorTool>
          <xmp:CreateDate>2022-03-30T13:19:07-04:00</xmp:CreateDate>
-         <xmp:MetadataDate>2022-03-30T13:26:02-04:00</xmp:MetadataDate>
-         <xmp:ModifyDate>2022-03-30T13:26:02-04:00</xmp:ModifyDate>
-         <xmpMM:InstanceID>xmp.iid:49d1a7b7-ed70-ef4d-b1d7-8d945d8a4bf3</xmpMM:InstanceID>
+         <xmp:MetadataDate>2022-05-03T23:12:02-04:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2022-05-03T23:12:02-04:00</xmp:ModifyDate>
+         <xmpMM:InstanceID>xmp.iid:27ce2399-43f7-9c4a-951c-e6bf07349d03</xmpMM:InstanceID>
          <xmpMM:DocumentID>xmp.did:361345a1-e67d-db41-86df-c53e7ca0e47b</xmpMM:DocumentID>
          <xmpMM:OriginalDocumentID>xmp.did:361345a1-e67d-db41-86df-c53e7ca0e47b</xmpMM:OriginalDocumentID>
          <xmpMM:History>
@@ -619,6 +619,20 @@
                   <stEvt:instanceID>xmp.iid:49d1a7b7-ed70-ef4d-b1d7-8d945d8a4bf3</stEvt:instanceID>
                   <stEvt:when>2022-03-30T13:26:02-04:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Audition 22.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:be4c7f12-f988-604c-af2f-cb254d1f6367</stEvt:instanceID>
+                  <stEvt:when>2022-05-03T23:12:02-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition 22.3 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:27ce2399-43f7-9c4a-951c-e6bf07349d03</stEvt:instanceID>
+                  <stEvt:when>2022-05-03T23:12:02-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition 22.3 (Windows)</stEvt:softwareAgent>
                   <stEvt:changed>/</stEvt:changed>
                </rdf:li>
             </rdf:Seq>
@@ -745,11 +759,11 @@
   </session>
 
   <files>
-    <file absolutePath="D:\Nicholas\Documents\Github\Repositories\G421\G421_FinalProj\Sounds\Editing\Ship_Explode_v1\Conformed Files\Suckin 96000 1.wav" id="0" mediaHandler="AmioWav" relativePath="Conformed Files/Suckin 96000 1.wav"/>
+    <file absolutePath="D:\Nicholas\Documents\Github\Repositories\G421\G421_FinalProj\Sounds\Editing\Ship_Explode_v1\Conformed Files\Suckin 96000 1.wav" id="0" importerPrivateSettings="Compression:0:0;LargeFileSupport:0:0;SampleType:0:20;" mediaHandler="AmioWav" relativePath="Conformed Files/Suckin 96000 1.wav"/>
     <file absolutePath="D:\Nicholas\Documents\Github\Repositories\G421\G421_FinalProj\Sounds\Editing\Ship_Explode_v1\Imported Files\Explosion_C4_DET-0037-206.wav" id="1" importerPrivateSettings="Compression:0:0;LargeFileSupport:0:0;SampleType:0:20;" mediaHandler="AmioWav" relativePath="Imported Files/Explosion_C4_DET-0037-206.wav"/>
     <file absolutePath="D:\Nicholas\Documents\Github\Repositories\G421\G421_FinalProj\Sounds\Editing\Ship_Explode_v1\Imported Files\Explosion_Artillery_DET-0020-267.wav" id="2" importerPrivateSettings="Compression:0:0;LargeFileSupport:0:0;SampleType:0:20;" mediaHandler="AmioWav" relativePath="Imported Files/Explosion_Artillery_DET-0020-267.wav"/>
     <file absolutePath="D:\Nicholas\Documents\Github\Repositories\G421\G421_FinalProj\Sounds\Editing\Ship_Explode_v1\Imported Files\METLFric_Metal Stress Scrape Tear Scratch Steel_PSE_GEN_7C690B90.wav" id="3" importerPrivateSettings="Compression:0:0;LargeFileSupport:0:0;SampleType:0:40;" mediaHandler="AmioWav" relativePath="Imported Files/METLFric_Metal Stress Scrape Tear Scratch Steel_PSE_GEN_7C690B90.wav"/>
-    <file absolutePath="D:\Nicholas\Documents\Github\Repositories\G421\G421_FinalProj\Sounds\Editing\Ship_Explode_v1\Conformed Files\Debris1 96000 1.wav" id="4" mediaHandler="AmioWav" relativePath="Conformed Files/Debris1 96000 1.wav"/>
+    <file absolutePath="D:\Nicholas\Documents\Github\Repositories\G421\G421_FinalProj\Sounds\Editing\Ship_Explode_v1\Conformed Files\Debris1 96000 1.wav" id="4" importerPrivateSettings="Compression:0:0;LargeFileSupport:0:0;SampleType:0:40;" mediaHandler="AmioWav" relativePath="Conformed Files/Debris1 96000 1.wav"/>
   </files>
 
   <audioDevice inputID="E3F54E32-3AA5-4060-AAAA-9E8981C6F0DD" outputID="DDB0153D-B217-443C-B5D4-A56EA2A2B8CE">

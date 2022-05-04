@@ -22,8 +22,8 @@ public class Done_PlayerController : MonoBehaviour
 	/* G421 */
 	// Create EventInstance for the movement Events created in FMOD.
 	// These are public because we need to call them when the ship is moving in any direction AND when it explodes and can no longer move
-	//public FMOD.Studio.EventInstance moveHorizontalSound;
-	//public FMOD.Studio.EventInstance moveVerticalSound;
+	public FMOD.Studio.EventInstance moveHorizontalSound;
+	public FMOD.Studio.EventInstance moveVerticalSound;
 
 	void Start()
 	{
@@ -31,8 +31,8 @@ public class Done_PlayerController : MonoBehaviour
 		// link FMOD Events to the EventInstance(s) created above
 		// Link FMOD Events to the EventInstance created above
 		// Paste your Event full path into CreateInstance("event:/path_to_event_in_FMOD")
-		//moveHorizontalSound = FMODUnity.RuntimeManager.CreateInstance("");
-		//moveVerticalSound = FMODUnity.RuntimeManager.CreateInstance("");
+		moveHorizontalSound = FMODUnity.RuntimeManager.CreateInstance("event:/HorizontalEngine");
+		moveVerticalSound = FMODUnity.RuntimeManager.CreateInstance("event:/HorizontalEngine");
 	}
 
 	void Update ()
@@ -42,31 +42,39 @@ public class Done_PlayerController : MonoBehaviour
 		if (Input.GetButtonDown ("Horizontal"))
 		{
 			// play FMOD horizontal movement Event
-			//moveHorizontalSound.start();
-			//print ("now moving horizontally");
+			moveHorizontalSound.start();
+			print ("now moving horizontally");
 		}
 
 		if (Input.GetButtonUp ("Horizontal"))
 		{
 			// quit FMOD horizontal movement event
-			//moveHorizontalSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-			//print ("not moving horizontally");
+			moveHorizontalSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			print ("not moving horizontally");
 		}
 
 		if (Input.GetButtonDown ("Vertical"))
 		{
 			// play FMOD vertical movement Event
-			//moveVerticalSound.start();
-			//print ("now moving vertically");
+			moveVerticalSound.start();
+			print ("now moving vertically");
 		}
 
 		if (Input.GetButtonUp ("Vertical"))
 		{
 			// quit FMOD vertical movement event
-			//moveVerticalSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-			//print ("not moving vertically");
+			moveVerticalSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			print ("not moving vertically");
 		}
-		
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			// quit FMOD vertical movement event
+			moveVerticalSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			print("not moving vertically");
+			moveHorizontalSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			print("not moving horizontally");
+		}
+
 		if (Input.GetButton("Fire1") && Time.time > nextFire) 
 		{
 			nextFire = Time.time + fireRate;
@@ -76,7 +84,7 @@ public class Done_PlayerController : MonoBehaviour
 			// player weapon randomized event via FMOD
 			// Link FMOD Events to the EventInstance created above
 			// Paste your Event full path into PlayOneShot("event:/path_to_event_in_FMOD")
-			FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerExplosion");
+			FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerLaser");
 
 			// original shot fired audio call was here //
 			Debug.Log("player fires");
@@ -99,5 +107,10 @@ public class Done_PlayerController : MonoBehaviour
 		);
 		
 		GetComponent<Rigidbody>().rotation = Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
+
+		//modify parameter for movement sound
+		//moveHorizontalSound.setParameterByName("Speed", (Mathf.Abs(moveHorizontal));
+		moveHorizontalSound.setParameterByName("Speed", moveHorizontal);
+		moveVerticalSound.setParameterByName("Speed", moveVertical);
 	}
 }

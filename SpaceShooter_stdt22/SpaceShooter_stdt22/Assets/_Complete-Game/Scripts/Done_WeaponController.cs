@@ -11,7 +11,7 @@ public class Done_WeaponController : MonoBehaviour
 
 	/* G421 */
 	// Create EventInstance for the enemy weapon Event(s) created in FMOD.
-	//FMOD.Studio.EventInstance enemy_fire;
+	FMOD.Studio.EventInstance enemy_fire;
 
 	void Start ()
 	{
@@ -24,7 +24,7 @@ public class Done_WeaponController : MonoBehaviour
 		// Link FMOD Events to the EventInstance created above
 		// Link FMOD Events to the EventInstance created above
 		// Paste your Event full path into CreateInstance("event:/path_to_event_in_FMOD")
-		//enemy_fire = FMODUnity.RuntimeManager.CreateInstance("");
+		enemy_fire = FMODUnity.RuntimeManager.CreateInstance("event:/EnemyLaster");
 	}
 
 	void Fire ()
@@ -34,9 +34,9 @@ public class Done_WeaponController : MonoBehaviour
 		// Use the next line to position your sounds Left to Right in the stereo field
 		//YourEventNameGoesHere.setParameterByName("parameter_string", transform.position.x);
 		// FMOD parameter sheet should run across values -6 (LEFT) to 6 (RIGHT)
-		//enemy_fire.setParameterByName("", transform.position.x);
+		enemy_fire.setParameterByName("exploded-at", transform.position.x);
 		// Once the pan has been determined, play the sound
-		//enemy_fire.start();
+		enemy_fire.start();
 		Debug.Log("ENEMY fires");
 
 		Invoke("Fire", Random.Range(fireRateMin,fireRateMax));

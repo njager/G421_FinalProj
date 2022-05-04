@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{858fe24b-0f04-4bef-9b54-52ff5ff4ff7b}">
+		<property name="name">
+			<value>exploded-at</value>
+		</property>
+		<relationship name="folder">
+			<destination>{99fb93c4-f8ff-408f-8eb1-557f91c9f71a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{762af004-7507-4d99-abf5-99bb752ac4e4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{762af004-7507-4d99-abf5-99bb752ac4e4}">
+		<property name="minimum">
+			<value>-6</value>
+		</property>
+		<property name="maximum">
+			<value>6</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
